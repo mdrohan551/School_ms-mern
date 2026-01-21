@@ -1,0 +1,351 @@
+/* 'Poppins' font added  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@font-face {
+    font-family: "NexaBold";
+    src: url(../../client/public/assests/font/NexaBold.woff);
+}
+
+@font-face {
+    font-family: "Nexalight";
+    src: url(../../client/public/assests/font/NexaLight.woff);
+}
+
+
+/* dark theme config */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+
+    }
+
+    ::-moz-selection {
+        /* Code for Firefox */
+        color: rgb(248, 248, 248);
+        background: rgb(21, 255, 0);
+    }
+
+    ::selection {
+        color: rgb(207, 207, 207);
+        background: rgb(147, 4, 204);
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+
+
+    }
+
+
+}
+
+@layer components {
+    
+    /*swal2-popup*/
+    .dark .swal2-popup{
+        background: #000 !important;
+        border: 1px solid purple !important;
+        color:#ddd !important;
+        border-radius: 30px !important;
+    }
+    .swal2-popup{ border-radius: 30px !important;}
+
+
+    .swal2-backdrop-show{
+        backdrop-filter: blur(5px);
+    }
+    /*error text animation*/
+    .animate-slide-bottom {
+        position: absolute;
+        animation: animateErrortext 1s forwards;
+    }
+
+    @keyframes animateErrortext {
+        0% {
+
+            transform: translateY(40px);
+        }
+        100% {
+
+            transform: translateY(0);
+        }
+    }
+    .animate-slide-top {
+        position: absolute;
+        animation: animateAlert 0.5s ease-in-out forwards;
+    }
+
+    @keyframes animateAlert {
+        0% {
+
+            transform: translateY(0px);
+        }
+        100% {
+
+            transform: translateY(-20px);
+        }
+    }
+
+    /* Custom gradient dark mode override */
+    /* Example: body dark mode */
+    input::placeholder {
+        color: #00000033;
+        font-size: 17px;
+    }
+
+    input[type=checkbox] {
+        accent-color: #139483;
+    }
+
+    .font-display-swap {
+        font-display: swap;
+    }
+
+    /* Scrollbar Design  */
+    /* Hide scrollbar initially */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 3px;
+        background: transparent;
+    }
+
+    /* Make scrollbar track transparent */
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Make scrollbar thumb transparent initially */
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 4px;
+    }
+
+    /* Show scrollbar on hover */
+    .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+        background: #020002;
+        /* Grayish thumb */
+    }
+
+    .custom-scrollbar:hover::-webkit-scrollbar-track {
+        background: #feffff;
+        /* Dark background */
+    }
+
+    .custom-gradiant-bg {
+        background: #020024;
+        background: linear-gradient(to right, #09327f, #06183b);
+    }
+
+    .custom-gradiant-bg-2 {
+        background: #132c38;
+        background: linear-gradient(171deg, rgba(19, 44, 56, 1) 0%, rgba(11, 36, 23, 1) 50%, rgba(66, 0, 0, 1) 100%);
+    }
+
+
+    .bg-glass-effect {
+        background: rgba(223, 215, 215, 0);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+    }
+
+    .toggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        transition: transform 0.5s;
+    }
+
+    .bars {
+        width: 100%;
+        height: 2px;
+        background-color: rgb(176, 92, 255);
+        border-radius: 4px;
+        transition: all 0.5s ease;
+    }
+
+    .nexabold-font {
+        font-family: "NexaBold", sans-serif;
+    }
+
+    .nexalight-font {
+        font-family: "NexaBold", sans-serif;
+    }
+
+    .popins-font {
+        font-family: 'Poppins' sans-serif;
+    }
+
+    @keyframes drop {
+        0% {
+            transform: translateY(-4%);
+
+        }
+
+        100% {
+            transform: translateY(-0%);
+
+        }
+    }
+
+    .drop-animation2 {
+        animation: drop2 3s alternate ease-in-out infinite;
+        transform: translateY(0);
+    }
+
+    @keyframes drop2 {
+        0% {
+            transform: translateY(-50%);
+
+        }
+
+        100% {
+            transform: translateY(-0%);
+
+        }
+    }
+
+    .drop-animation3 {
+        animation: drop3 2s alternate ease-in-out infinite;
+        transform: translateY(0);
+    }
+
+    @keyframes drop3 {
+        0% {
+            transform: translateY(-50%);
+
+        }
+
+        100% {
+            transform: translateY(-0%);
+
+        }
+    }
+
+    .cursor-wrapper::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgba(128, 128, 128, 0.096);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        border-radius: 50%;
+    }
+
+
+    .anim-roted {
+        transform: rotate(0);
+        animation: infinite alternate linear 9s roted;
+    }
+
+    @keyframes roted {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(160deg);
+        }
+
+        60% {
+            transform: rotate(160deg);
+        }
+
+        70% {
+            transform: rotate(0);
+        }
+
+        80% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(0);
+        }
+    }
+
+    .bakdropblure {
+        backdrop-filter: 50px;
+    }
+
+    .animate-bubble {
+        animation: bubble infinite linear 5s;
+        transform: translateY(0rem);
+        opacity: 0;
+
+    }
+
+    .animate-bubble2 {
+        animation: bubble infinite linear 2s;
+        transform: translateY(0rem);
+        opacity: 0;
+
+    }
+
+    @keyframes bubble {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(-20rem);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: translateY(-40rem);
+            opacity: 0.2;
+        }
+
+    }
+    .drop-animation {
+        animation: drop 1s alternate ease-in-out infinite;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* Theme variable  */
+@theme {
+    --color-rose-darken: oklch(0.266 0.079 36.259);
+    --color-rose-bright: oklch(0.455 0.188 13.697);
+    --color-teal-darken: oklch(0.386 0.063 188.416);
+    --color-teal-bright: #ca3500;
+    --color-teal-white: oklch(0.91 0.096 180.426);
+    --color-lightgrayColor: #F5F5F5;
+    --color-purpleColor: #9333ea;
+    --color-orangeColor: #F9A825;
+    --color-lightpurpleColor: #8e6efc;
+    --color-junglegreen-darken: #0A400C;
+    --color-junglegreen-bright: #118014;
+}
+
+
+/* Utility classes */
+@utility flex-center {
+    @apply flex justify-center items-center
+}
+
+@utility login-tab {
+    @apply cursor-pointer text-junglegreen-bright border-1 border-b-junglegreen-bright w-22 h-22 rounded-full flex-center flex-col
+}

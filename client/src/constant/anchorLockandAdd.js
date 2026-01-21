@@ -1,0 +1,2 @@
+export const isDisabled = ["Fees Structure", "Discount Type", "Fees Report", "Manage Families", "Active / Inactive", "Staff ID Cards", "Delete Fees"] // Only these pages will have the tooltip
+export const desktopVersion= ["Fees Structure", "Discount Type", "Fees Report", "Manage Families", "Active / Inactive", "Staff ID Cards", "Delete Fees"] // To show tooltip on these links only

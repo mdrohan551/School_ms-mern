@@ -1,0 +1,7 @@
+.vscode
+.idea
+idea
+node_modules
+.env
+.md
+README.md
