@@ -37,7 +37,7 @@ const ClassWithSubjectPage = lazy(() => import('./pages/Admin/SubjectsPage/Class
 const AssignSubjectPage = lazy(() => import('./pages/Admin/SubjectsPage/AssignSubjectPage.jsx'));
 const AllStudentPage = lazy(() => import('./pages/Admin/StudentPage/AllStudentPage.jsx'));
 const AddNewPage = lazy(() => import('./pages/Admin/StudentPage/AddNewPage.jsx'));
-const ManageFamiliePage = lazy(() => import('./pages/Admin/StudentPage/ManageFamiliePage.jsx'));
+
 const ActiviInactivePage = lazy(() => import('./pages/Admin/StudentPage/ActiviInactivePage.jsx'));
 const AdmissionLetterPage = lazy(() => import('./pages/Admin/StudentPage/AdmissionLetterPage.jsx'));
 const StudentCardPage = lazy(() => import('./pages/Admin/StudentPage/StudentCardPage.jsx'));
@@ -139,7 +139,7 @@ const AppRoutes = () => {
                             <Route path='allstudent' element={<AllStudentPage/>}/>
                             <Route path='singleStudent/:id' element={<StudentDetailsPage/>}/>
                             <Route path='admission' element={<AddNewPage/>}/>
-                            <Route path='manage-family' element={<ManageFamiliePage/>}/>
+                          
                             <Route path='active-state' element={<ActiviInactivePage/>}/>
                             <Route path='admission-letter' element={<AdmissionLetterPage/>}/>
                             <Route path='studentid' element={<StudentCardPage/>}/>
