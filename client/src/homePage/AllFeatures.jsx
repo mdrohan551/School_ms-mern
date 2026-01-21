@@ -1,11 +1,12 @@
-import React from 'react'
+
 import {
     Landmark,
     Loader,
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+
 import { allFeatures } from '../constant/HomePageData';
 import BgblureShap from './animationcomponent/bgBlureShap';
+
 const featureVariant = {
     hidden: { opacity: 0, y: 60 },
     visible: (i) => ({
